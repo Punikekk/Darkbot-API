@@ -158,6 +158,8 @@ void BrowserWindow::mouseClick(int x, int y){
                                              Qt::MouseButton::NoButton,
                                              Qt::NoModifier);
      QCoreApplication::postEvent(eventsReciverWidget, release);
+     // Delay and send packet to waiting dll
+     // should be better implemented
      Sleep(50);
      socket->write("alo", 4);
 }
